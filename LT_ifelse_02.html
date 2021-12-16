@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập if else 02</title>
+</head>
+<body>
+<h2>Bài 1: Chuyển từ độ C sang độ F.</h2>
+<div>
+    <label>Nhập độ C</label>
+    <input id="do_c" type="text">
+</div>
+<br>
+<button onclick="bai1()">Chuyển đổi</button>
+<p id="bai1_inra"></p>
+<hr>
+<h2>Bài 2: Chuyển từ mét sang feet: </h2>
+<div>
+    <label>Nhập độ dài (mét)</label>
+    <input id="met" type="text">
+</div>
+<br>
+<button onclick="bai2()">Chuyển đổi</button>
+<p id="bai2_inra"></p>
+<hr>
+
+<h2>Bài 3: Tính diện tích hình vuông khi biết cạnh a. </h2>
+<div>
+    <label>Độ dài cạnh a</label>
+    <input id="canh_a" type="text">
+</div>
+<br>
+<button onclick="bai3()">Tính</button>
+<p id="bai3_inra"></p>
+<hr>
+<h2>Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b. </h2>
+<div>
+    <label>Độ dài cạnh a</label>
+    <input id="c_a" type="text">
+</div>
+<br>
+<div>
+    <label>Độ dài cạnh b</label>
+    <input id="c_b" type="text">
+</div>
+<br>
+<button onclick="bai4()">Tính</button>
+<p id="bai4_inra"></p>
+<hr>
+<h2>Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.</h2>
+<div>
+    <label>Độ dài cạnh a</label>
+    <input id="c_a5" type="text">
+</div>
+<br>
+<div>
+    <label>Độ dài cạnh b</label>
+    <input id="c_b5" type="text">
+</div>
+<br>
+<button onclick="bai5()">Tính</button>
+<p id="bai5_inra"></p>
+<hr>
+<h2>Bài 6: Giải phương trình bậc 1.(ax+b=0)</h2>
+<div>
+    <label> Hệ số a</label>
+    <input id="hs_a6" type="text">
+</div>
+<br>
+<div>
+    <label> Hệ số b</label>
+    <input id="hs_b6" type="text">
+</div>
+<br>
+<button onclick="bai6()">Tính</button>
+<p id="bai6_inra"></p>
+<hr>
+<h2>Bài 7: Giải phương trình bậc 2.(ax2+bx+c=0)</h2>
+<div>
+    <label> Hệ số a</label>
+    <input id="hs_a7" type="text">
+</div>
+<br>
+<div>
+    <label> Hệ số b</label>
+    <input id="hs_b7" type="text">
+</div>
+<br>
+<div>
+    <label> Hệ số c</label>
+    <input id="hs_c7" type="text">
+</div>
+<br>
+<button onclick="bai7()">Tính</button>
+<p id="bai7_inra"></p>
+<hr>
+<!---->
+<h2>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</h2>
+<div>
+    <label> Tuổi</label>
+    <input id="tuoi" type="text">
+</div>
+<br>
+<button onclick="bai8()"> Kiểm tra</button>
+<p id="bai8_inra"></p>
+<hr>
+<!---->
+<h2>Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:</h2>
+<div>
+    <label> cạnh a</label>
+    <input id="c_a9" type="text">
+</div>
+<br>
+<div>
+    <label> cạnh b</label>
+    <input id="c_b9" type="text">
+</div>
+<br>
+<div>
+    <label> cạnh c</label>
+    <input id="c_c9" type="text">
+</div>
+<br>
+<button onclick="bai9()">kiểm tra</button>
+<p id="bai9_inra"></p>
+<hr>
+<h2>Bài 10: Chuong trình tính giá điện: </h2>
+<div>
+    <label>Số điện sử dụng là :</label>
+    <input id="sodien" type="text">
+</div>
+<br>
+<button onclick="bai10()">Tính</button>
+<p id="bai10_inra"></p>
+<hr>
+<h2>Bài 11: Viết chương trình tính thuế thu nhập cá nhân. </h2>
+<div>
+    <label>Thu nhập một tháng :</label>
+    <input id="luong" type="text">
+</div>
+<br>
+<button onclick="bai11()">Tính</button>
+<p id="bai11_inra"></p>
+<hr>
+<h1>Tính Lãi Ngân hàng</h1>
+<table>
+    <tr>
+        <td style="width: 200px"><label >Số tiền gửi(VND):</label></td>
+        <td><input id="monney" type="text"></td>
+    </tr>
+    <tr>
+        <td><label>Gói kỳ hạn gửi :</label></td>
+        <td>
+            <select id="laisuat">
+                <option value="0">Không kỳ hạn(1%/Năm)</option>
+                <option value="1" name="1">1 tháng(3%/Năm)</option>
+                <option value="3" name="3">3 tháng(3.3%/Năm)</option>
+                <option value="6">6 tháng(4%/Năm)</option>
+                <option value="12">12 tháng(5.5%/Năm)</option>
+                <option value="18">18 tháng(6%/Năm)</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label>Thời gian gửi:(Tháng)</label></td>
+        <td><input id="year" type="text"></td>
+    </tr>
+</table>
+<br>
+<p id="print">Số Tiền lãi là :</p>
+<button onclick="bai12()" > Tính Lãi</button>
+<script>
+function bai1(){
+    let do_c=parseFloat(document.getElementById("do_c").value)
+    let do_f=do_c* 9/5 +32
+    document.getElementById("bai1_inra").innerHTML= "Độ F là " + do_f
+}
+
+function bai2(){
+    let met=parseFloat(document.getElementById("met").value)
+    let fet=met * 3.2808
+    document.getElementById("bai2_inra").innerHTML= "feet "+ fet
+}
+function bai3(){
+    let canh_a=parseFloat(document.getElementById("canh_a").value)
+    let dientich=canh_a*canh_a
+    document.getElementById("bai3_inra").innerHTML= "Diện tích hình vuông là "+ dientich
+}
+
+function bai4(){
+    let c_a=parseFloat(document.getElementById("c_a").value)
+    let c_b=parseFloat(document.getElementById("c_b").value)
+    let dientich=c_a*c_b
+    document.getElementById("bai4_inra").innerHTML= "Diện tích hình chữ nhật là "+ dientich
+}
+
+function bai5(){
+    let c_a5=parseFloat(document.getElementById("c_a5").value)
+    let c_b5=parseFloat(document.getElementById("c_b5").value)
+    let dientich=c_a5*c_b5/2
+    document.getElementById("bai5_inra").innerHTML= "Diện tích hình tam giác vuông "+ dientich
+}
+
+function bai6(){
+    let hs_a6=parseFloat(document.getElementById("hs_a6").value)
+    let hs_b6=parseFloat(document.getElementById("hs_b6").value)
+    let kq_x=-hs_b6/hs_a6
+    document.getElementById("bai6_inra").innerHTML= "x= "+ kq_x
+}
+
+function bai7() {
+    let hs_a7 = parseFloat(document.getElementById("hs_a7").value)
+    let hs_b7 = parseFloat(document.getElementById("hs_b7").value)
+    let hs_c7 = parseFloat(document.getElementById("hs_c7").value)
+    let x1
+    let x2
+    let deta = Math.pow(hs_b7, 2) - 4 * hs_a7 * hs_c7;
+    if (deta < 0) {
+        document.getElementById("bai7_inra").innerHTML = "Phương trình vô nghiệm"
+    } else if (deta > 0) {
+        x1 = (-1 * hs_b7 + Math.sqrt(deta)) / (2 * hs_a7)
+        x2 = (-1 * hs_b7 - Math.sqrt(deta)) / (2 * hs_a7)
+        document.getElementById("bai7_inra").innerHTML = "Phuong trình có 2 nghiệm: x1= " + x1 + " và x2= " + x2;
+    } else {
+       x1=-1*hs_b7/(2*hs_a7)
+        document.getElementById("bai7_inra").innerHTML = "Phuong trình có 1 nghiệm: x1= " + x1 ;
+    }
+}
+function bai8() {
+    let tuoi = parseFloat(document.getElementById("tuoi").value)
+    if (tuoi > 0 && tuoi < 120) {
+        document.getElementById("bai8_inra").innerHTML = "Đây là tuổi của một người "
+    }else {
+        document.getElementById("bai8_inra").innerHTML = "Đây là  không phải tuổi của một người "
+
+    }
+}
+function bai9() {
+    let c_a9 = parseFloat(document.getElementById("c_a9").value)
+    let c_b9 = parseFloat(document.getElementById("c_b9").value)
+    let c_c9 = parseFloat(document.getElementById("c_c9").value)
+    if (c_a9+c_b9>c_c9 && c_a9+c_c9>c_b9 && c_b9+c_c9>c_a9) {
+        document.getElementById("bai9_inra").innerHTML = "Đây là một tam giác"
+    }else {
+        document.getElementById("bai9_inra").innerHTML = "Đây không phải là một tam giác"
+    }
+}
+function bai10() {
+    let soDien = parseFloat(document.getElementById("sodien").value)
+    let  bac1=1678, bac2=1734, bac3=2014, bac4=2536, bac5=2834, bac6=2927;
+    let  sotien
+    if (soDien<50) {
+        sotien=soDien*bac1
+    }else if(soDien<=100){
+        sotien=50*bac1+((soDien-50)*bac2)
+    }else if(soDien<=200){
+        sotien=50*bac1+(50*bac2)+((soDien-100)*bac3);
+    }else if(soDien<=300) {
+        sotien = 50 * bac1 + (50 * bac2) + (100 * bac3) + ((soDien - 200) * bac4);
+    }else if(soDien<=400) {
+        sotien = 50 * bac1 + (50 * bac2) + (100 * bac3) + (100 * bac4) + ((soDien - 300) * bac5);
+    }else if(soDien>400) {
+        sotien = 50 * bac1 + (50 * bac2) + (100 * bac3) + (100 * bac4) + (100 * bac5) + ((soDien - 400) * bac6);
+    }
+    document.getElementById("bai10_inra").innerHTML = "Số Tiền Điên sử dụng là "+sotien + "VND"
+}
+function bai11() {
+    let luong = parseFloat(document.getElementById("luong").value)
+    let  bac1=0.05, bac2=0.1, bac3=0.15, bac4=0.2, bac5=0.25,bac6=0.3,bac7=0.35
+    let  l1=5000000, l2=10000000,l3=18000000,l4=32000000,l5=52000000,l6=80000000
+    let  Tienthue
+    if (luong<=l1) {
+        Tienthue=luong*bac1
+    }else if(luong<=l2){
+        Tienthue=l1*bac1+(l2-l1)*bac2
+    }else if(luong<=l3){
+        Tienthue=l1*bac1+(l2-l1)*bac2+(l3-l2)*bac3;
+    }else if(luong<=l4) {
+        Tienthue = l1*bac1+(l2-l1)*bac2+(l3-l2)*bac3+(l4-l3)*bac4;
+    }else if(luong<=l5) {
+        Tienthue = l1 * bac1 + (l2 - l1) * bac2 + (l3 - l2) * bac3 + (l4 - l3) * bac4+ (l5 - l4) * bac5;
+    }else if(luong<=l6) {
+        Tienthue = l1 * bac1 + (l2 - l1) * bac2 + (l3 - l2) * bac3 + (l4 - l3) * bac4 + (l5 - l4) * bac5 + (l6 - l5) * bac6;
+    }else if(luong>l6){
+        Tienthue = l1 * bac1 + (l2 - l1) * bac2 + (l3 - l2) * bac3 + (l4 - l3) * bac4 + (l5 - l4) * bac5 + (l6 - l5) * bac6 + (luong - l6) * bac7;
+    }
+    document.getElementById("bai11_inra").innerHTML = "Số tiền thuế là "+Tienthue + "VND/Tháng"
+}
+
+//
+function bai12() {
+    var sotiengui=parseFloat(document.getElementById("monney").value)
+    let thoigian=parseFloat(document.getElementById("year").value)
+    let kyhan=parseInt(document.getElementById("laisuat").value)
+    let sotienbandau=sotiengui;
+    let  Tong_tienlai
+    let tienlai
+    if (kyhan===0) {
+        Tong_tienlai =thoigian*(sotiengui*0.01/12);
+    }else {
+        let solandaohan = parseInt(thoigian / kyhan)
+        for (i = 0; i < solandaohan; i++) {
+            if (kyhan === 1) {
+                tienlai = 1* (sotiengui * 0.03 / 12)
+                sotiengui = sotiengui + tienlai
+            }
+            if (kyhan === 3) {
+                tienlai = 3 * (sotiengui * 0.033 / 12)
+                sotiengui = sotiengui + tienlai
+            }
+            if (kyhan === 6) {
+                tienlai = 6 * (sotiengui * 0.04 / 12)
+                sotiengui = sotiengui + tienlai
+            }
+            if (kyhan === 12) {
+                tienlai = 12 * (sotiengui * 0.055/ 12)
+                sotiengui = sotiengui + tienlai
+            }
+            if (kyhan === 18) {
+                tienlai = 18 * (sotiengui * 0.06/ 12)
+                sotiengui = sotiengui + tienlai
+            }
+        }
+        Tong_tienlai=sotiengui-sotienbandau
+    }
+
+    document.getElementById("print").innerHTML="số tiền lãi là: " +Tong_tienlai +" VNĐ"
+}
+</script>
+</body>
+</html>
